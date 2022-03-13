@@ -26,14 +26,14 @@ body {
 
 .container {
     width: 375px;
-    height: 766px;
-    margin: auto;
-    
+    min-height: 766px;
+    margin: 20px auto;
 }
 
 header {
     background-color: #9657A5;
     padding: 24px 33px;
+    border-radius: 10px 10px 0 0;
 }
 
 h1 {
@@ -45,6 +45,7 @@ main {
     background-color: #E5E5E5;
     height: 100%;
     padding: 24px;
+    border-radius: 0 0 10px 10px;
 }
 
 label {
@@ -61,6 +62,9 @@ input, select {
     box-shadow: 2px 2px 5px 0px #00000026;
     font-weight: bold;
     color: #555555;
+    appearance: none;
+    outline: none;
+    cursor: pointer;
 }
 
 input[type="submit"] {
@@ -70,6 +74,11 @@ input[type="submit"] {
     font-weight: bold;
     font-size: 18px;
     border-radius: 25px;
+    border: none;
+}
+
+input[type="submit"]:active {
+    opacity: 0.7;
 }
 
 div#res {
@@ -77,15 +86,21 @@ div#res {
     height: 276px;
     border: 1px solid #9657A5;
     border-radius: 4px;
-    margin: 36px 0;
+    margin-top: 36px;
     text-align: center;
     padding: 12px;
+    overflow: hidden;
+}
+
+img#seta {
+    margin: 10px 0;
 }
 
 p.moeda {
     font-size: 14px;
     color: #777777;
 }
+
 p.valor {
     font-size: 20px;
     font-weight: bold;
