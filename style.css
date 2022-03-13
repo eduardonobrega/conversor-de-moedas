@@ -24,16 +24,12 @@ body {
     background-color: #2C2C2C;
 }
 
-.container {
-    width: 375px;
-    min-height: 766px;
-    margin: 20px auto;
-}
-
 header {
     background-color: #9657A5;
     padding: 24px 33px;
     border-radius: 10px 10px 0 0;
+    max-width: 375px;
+    margin: 20px auto 0 auto;
 }
 
 h1 {
@@ -42,8 +38,10 @@ h1 {
 }
 
 main {
+    max-width: 375px;
+    max-height: 766px;
+    margin: 0 auto 20px auto;
     background-color: #E5E5E5;
-    height: 100%;
     padding: 24px;
     border-radius: 0 0 10px 10px;
 }
