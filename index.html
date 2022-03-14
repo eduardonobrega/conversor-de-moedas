@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MS1 - Conversor de Moedas</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style/style.css">
 </head>
 
 <body>
@@ -15,29 +15,31 @@
         <h1>MS1 - Conversor de Moedas</h1>
     </header>
     <main>
-        <label for="de">Converter <strong>de</strong></label>
-        <select name="de" id="de">
+        <label for="from">Converter <strong>de</strong></label>
+        <select name="from" id="from" onchange="changed()">
             <option value="real">R$ Real brasileiro</option>
         </select>
-        <label for="para">Converter <strong>para</strong></label>
-        <select name="para" id="para">
+        <label for="to">Converter <strong>para</strong></label>
+        <select name="to" id="to" onchange="changed()">
             <option value="dolar">US&dollar; Dólar americano</option>
             <option value="euro">&euro; Euro</option>
         </select>
         <label for="valor"><strong>Valor</strong></label>
-        <input type="number" name="valor" id="valor" min="0">
-        <input type="submit" value="Converter">
+        <input type="number" name="money" id="money" min="0">
+        <input type="submit" value="Converter" onclick="convert()">
+
         <div id="res">
-            <img src="img/brasil.png" alt="Brasil">
-            <p id="deMoeda" class="moeda">Real</p>
-            <p id="deValor" class="valor">R$ 0.00</p>
-            <img src="img/seta.png" alt="Seta para baixo" id="seta"><br>
-            <img src="img/estados-unidos.png" alt="Estados Unidos">
-            <p id="paraMoeda" class="moeda">Dólar Americano</p>
-            <p id="paraValor" class="valor">R$ 0.00</p>
+            <img src="./img/brasil.png" alt="Brasil">
+            <p id="coinFrom" class="moeda">Real</p>
+            <p id="valueFrom" class="valor">R$ 0.00</p>
+            <img src="./img/seta.png" alt="Seta para baixo" id="seta"><br>
+            <img src="./img/estados-unidos.png" alt="Estados Unidos">
+            <p id="coinTo" class="moeda">Dólar Americano</p>
+            <p id="valueTo" class="valor">&dollar;0.00</p>
         </div>
     </main>
-
+    
+    <script src="./script.js"></script>
 </body>
 
 </html>
