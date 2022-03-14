@@ -1,6 +1,5 @@
 var money = document.getElementById('money')
 
-var price = 5.08
 // config From
 var convertFrom = document.getElementById('from')
 var imgFrom = document.getElementsByTagName('img')[0]
@@ -13,7 +12,7 @@ var coinTo = document.getElementById('coinTo')
 var valueTo = document.getElementById('valueTo')
 var convertTo = document.getElementById('to')
 
-function changed() { // trocando imagens, textos da div resultado e cotação da moeda
+function changed() { // trocando imagens E textos da div resultado
 
     if (convertFrom.value == 'real') {
         imgFrom.src = './img/brasil.png'
@@ -23,14 +22,11 @@ function changed() { // trocando imagens, textos da div resultado e cotação da
     if (convertTo.value == 'dolar') {
         imgTo.src = './img/estados-unidos.png'
         coinTo.innerText = 'Dólar Americano'
-        price = 5.08
     } else if (convertTo.value == 'euro') {
         imgTo.src = './img/euro.png'
         coinTo.innerText = 'Euro'
-        price = 2
     }
     convert()
-
 }
 
 money.setAttribute('placeholder', 'R$ 10.000,00')
